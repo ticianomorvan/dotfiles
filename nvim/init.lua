@@ -55,15 +55,24 @@ require("lazy").setup({
       opts = {}
     },
     {
+      "nvim-lualine/lualine.nvim",
+      dependencies = "nvim-tree/nvim-web-devicons",
+      opts = {}
+    },
+    {
       "nvim-tree/nvim-tree.lua",
       dependencies = { "nvim-tree/nvim-web-devicons" },
       keys = {
         { "tt", "<cmd>NvimTreeToggle<cr>", desc = "[T]oggle [T]ree" },
         { "ft", "<cmd>NvimTreeFocus<cr>", desc = "[F]ocus [T]ree" }
       },
-      opts = {},
+      opts = {
+        view = {
+          side = "right"
+        }
+      },
     }, 
-    { "comfysage/evergarden", priority = 1000, opts = {} },
+    { "Mofiqul/vscode.nvim", priority = 1000, opts = { style = "dark" } },
     { "wakatime/vim-wakatime" }
   },
   -- Configure any other settings here. See the documentation for more details.
@@ -127,7 +136,7 @@ require('lspconfig')['clangd'].setup {
   capabilities = capabilities
 }
 
-require('lspconfig')['tsserver'].setup {
+require('lspconfig')['ts_ls'].setup {
   capabilities = capabilities
 }
 
@@ -139,4 +148,4 @@ require('lspconfig')['cssls'].setup {
   capabilities = capabilities
 }
 
-vim.cmd[[colorscheme evergarden]]
+vim.cmd[[colorscheme vscode]]

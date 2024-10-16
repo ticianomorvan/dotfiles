@@ -1,0 +1,36 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 14,
+  "theme": {
+    "mode": "system",
+    "light": "Github Dark",
+    "dark": "macOS Classic Dark"
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.next",
+    "**/.plasmo",
+    "**/.turbo",
+    "**/node_modules",
+    "**/dist"
+  ],
+  "project_panel": {
+    "dock": "right"
+  },
+  "lsp": {
+    "wakatime": {
+      "settings": {
+        "api-key": ""
+      }
+    }
+  }
+}
